@@ -30,7 +30,7 @@ class TrainSeatController extends AdminController
     {
         parent::__construct();
         $this->setActiveMenu(route('train.admin.index'));
-        $this->train_seat = TrainSeat::class;
+        $this->train_seat = SeatType::class;
         $this->flight = TrainModel::class;
         $this->currentFlight = TrainModel::class;
     }
