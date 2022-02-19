@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                         </div>
-                        @include('Tour::admin.tour.attributes')
+                        @include('Tour::admin.tour.attributes_train')
                         @endif
                     </div>
                 </div>

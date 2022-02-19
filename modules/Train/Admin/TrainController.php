@@ -134,7 +134,7 @@ class TrainController extends AdminController
         ]);
         $data = [
             'row'            => $row,
-            'attributes'     => $this->attributes::where('service', 'flight')->get(),
+            'attributes'     => $this->attributes::where('service', 'train')->get(),
             'translation'    => $row,
             'breadcrumbs'    => [
                 [
@@ -166,7 +166,7 @@ class TrainController extends AdminController
         $data = [
             'row'               => $row,
             "selected_terms"    => $row->terms->pluck('term_id'),
-            'attributes'        => $this->attributes::where('service', 'flight')->get(),
+            'attributes'        => $this->attributes::where('service', 'train')->get(),
             'enable_multi_lang' => true,
             'breadcrumbs'       => [
                 [
@@ -185,7 +185,6 @@ class TrainController extends AdminController
 
     public function store(Request $request, $id)
     {
-
         if ($id > 0) {
             $this->checkPermission('flight_update');
             $row = $this->train::find($id);
@@ -209,6 +208,17 @@ class TrainController extends AdminController
             'duration'=>'required',
             'airport_from'=>'required',
             'airport_to'=>'required',
+
+            'ac_seat'=>'required',
+            'ac_berth'=>'required',
+            'economy_one_seat'=>'required',
+            'economy_one_berth'=>'required',
+            'economy_two_seat'=>'required',
+            'economy_two_berth'=>'required',
+            'brake_seat'=>'required',
+            'brake_berth'=>'required',
+
+
 //            'company_id'=>'required',
         ]);
         if ($validator->fails()) {
@@ -222,6 +232,15 @@ class TrainController extends AdminController
             'duration',
             'airport_from',
             'airport_to',
+            'ac_seat',
+            'ac_berth',
+            'economy_one_seat',
+            'economy_one_berth',
+            'economy_two_seat',
+            'economy_two_berth',
+            'brake_seat',
+            'brake_berth',
+
 //            'company_id',
             'status',
         ];

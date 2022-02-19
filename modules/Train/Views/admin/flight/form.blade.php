@@ -62,6 +62,62 @@
                     </div>
                 </div>
             </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="form-group mt-4">
+                    <label>{{__("AC Standard")}}</label>
+                </div>
+            </div>
+            <div class=" form-group col-lg-5">
+                <label>{{__(" Seat")}}</label>
+                <input type="text" name="ac_seat" value="{{old("ac_seat",$row->ac_seat)}}" id="ac_seat" class="form-control" placeholder="AC Seat">
+            </div>
+            <div class=" form-group col-lg-5">
+                <label>{{__(" Berth")}}</label>
+                <input type="text" name="ac_berth" value="{{old("ac_berth",$row->ac_berth)}}" id="ac_berth" class="form-control" placeholder="AC Berth">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label>{{__("Economy (78)")}}</label>
+                </div>
+            </div>
+            <div class=" form-group col-lg-5">
+                <input type="text" name="economy_one_seat" value="{{old("economy_one_seat",$row->economy_one_seat)}}" id="economy_one_seat" class="form-control" placeholder="Economy (78) Seat">
+            </div>
+            <div class=" form-group col-lg-5">
+                <input type="text" name="economy_one_berth" value="{{old("economy_one_berth",$row->economy_one_berth)}}" id="economy_one_berth" class="form-control" placeholder="Economy (78) Berth">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label>{{__("Economy (72)")}}</label>
+                </div>
+            </div>
+            <div class=" form-group col-lg-5">
+                <input type="text" name="economy_two_seat" value="{{old("economy_two_seat",$row->economy_two_seat)}}" id="economy_two_seat" class="form-control" placeholder="Economy (72) Seat">
+            </div>
+            <div class=" form-group col-lg-5">
+                <input type="text" name="economy_two_berth" value="{{old("economy_two_berth",$row->economy_two_berth)}}" id="economy_two_berth" class="form-control" placeholder="Economy (72) Berth">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="form-group">
+
+                    <label>{{__("Brake")}}</label>
+
+                </div>
+            </div>
+            <div class=" form-group col-lg-5">
+                <input type="text" name="brake_seat" value="{{old("brake_seat",$row->brake_seat)}}" id="brake_seat" class="form-control" placeholder="Brake Seat">
+            </div>
+            <div class=" form-group col-lg-5">
+                <input type="text" name="brake_berth" value="{{old("brake_berth",$row->brake_berth)}}" id="brake_berth" class="form-control" placeholder="Brake berth">
+            </div>
+        </div>
     </div>
 </div>
 <div class="panel">

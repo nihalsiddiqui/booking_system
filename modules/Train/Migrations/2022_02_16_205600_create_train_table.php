@@ -98,7 +98,14 @@ class CreateTrainTable extends Migration
             $blueprint->integer('airport_from')->nullable();
             $blueprint->integer('company_id')->nullable();
             $blueprint->string('status', 50)->nullable();
-
+            $blueprint->string('ac_seat')->nullable();
+            $blueprint->string('ac_berth')->nullable();
+            $blueprint->string('economy_one_seat')->nullable();
+            $blueprint->string('economy_one_berth')->nullable();
+            $blueprint->string('economy_two_seat')->nullable();
+            $blueprint->string('economy_two_berth')->nullable();
+            $blueprint->string('brake_seat')->nullable();
+            $blueprint->string('brake_berth')->nullable();
             $blueprint->bigInteger('create_user')->nullable();
             $blueprint->bigInteger('update_user')->nullable();
             $blueprint->timestamps();

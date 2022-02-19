@@ -12,7 +12,7 @@
                     <div class="panel-body">
                         <form action="{{route('train.admin.attribute.store',['id'=>($row->id) ? $row->id : '-1','lang'=>request()->query('lang')])}}" method="post">
                             @csrf
-                            @include('Train::admin/attribute/form',['parents'=>$rows])
+                            @include('Train::admin.attribute.form',['parents'=>$rows])
                             <div class="">
                                 <button class="btn btn-primary" type="submit">{{__("Add new")}}</button>
                             </div>
