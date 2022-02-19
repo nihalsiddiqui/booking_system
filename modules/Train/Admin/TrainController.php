@@ -209,7 +209,7 @@ class TrainController extends AdminController
             'duration'=>'required',
             'airport_from'=>'required',
             'airport_to'=>'required',
-            'airline_id'=>'required',
+//            'company_id'=>'required',
         ]);
         if ($validator->fails()) {
             return redirect()->back()->with(['errors' => $validator->errors()]);
@@ -222,7 +222,7 @@ class TrainController extends AdminController
             'duration',
             'airport_from',
             'airport_to',
-            'airline_id',
+//            'company_id',
             'status',
         ];
         if ($this->hasPermission('flight_manage_others')) {

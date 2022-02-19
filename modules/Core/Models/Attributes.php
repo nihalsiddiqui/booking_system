@@ -3,6 +3,7 @@ namespace Modules\Core\Models;
 
 use App\BaseModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Modules\Train\Models\TrainTerm;
 
 class Attributes extends BaseModel
 {

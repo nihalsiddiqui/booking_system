@@ -18,6 +18,7 @@ class Stations extends BaseModel
     use HasFactory;
     use SoftDeletes;
 
+
     protected $table = 'bravo_stations';
 
     protected $fillable=[

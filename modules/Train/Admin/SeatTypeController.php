@@ -9,6 +9,7 @@
     use Illuminate\Support\Facades\Validator;
     use Illuminate\Validation\Rule;
     use Modules\AdminController;
+    use Modules\Train\Models\SeatType;
     use Modules\Train\Models\TrainModel;
     use Modules\Train\Models\TrainSeat;
 
@@ -23,7 +24,7 @@
         {
             parent::__construct();
             $this->setActiveMenu(route('train.admin.index'));
-            $this->seatType = TrainSeat::class;
+            $this->seatType = SeatType::class;
         }
 
         public function callAction($method, $parameters)
