@@ -1,10 +1,11 @@
+
+@if($attributes)
 @foreach ($attributes as $attribute)
     <div class="panel">
         <div class="panel-title"><strong>{{__('Attribute: :name',['name'=>$attribute->name])}}</strong></div>
         <div class="panel-body">
             <div class="terms-scrollable">
                 @foreach($attribute->terms as $term)
-{{--                    @dd($term->attr_id == '12')--}}
                     <label class="term-item">
                         <input @if(!empty($selected_terms) and $selected_terms->contains($term->id)) checked @endif type="checkbox" name="terms[]" value="{{$term->id}}">
                         <span class="term-name">{{$term->name}}</span>
@@ -14,3 +15,4 @@
         </div>
     </div>
 @endforeach
+@endif

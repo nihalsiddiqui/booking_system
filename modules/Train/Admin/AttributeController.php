@@ -20,7 +20,7 @@ class AttributeController extends AdminController
         $this->setActiveMenu(route('train.admin.index'));
         parent::__construct();
         $this->attributesClass = Attributes::class;
-        $this->termsClass = TrainTerm::class;
+        $this->termsClass = Terms::class;
     }
 
     public function index(Request $request)

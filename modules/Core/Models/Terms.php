@@ -16,6 +16,8 @@ use Modules\Space\Models\Space;
 use Modules\Space\Models\SpaceTerm;
 use Modules\Tour\Models\Tour;
 use Modules\Tour\Models\TourTerm;
+use Modules\Train\Models\TrainModel;
+use Modules\Train\Models\TrainTerm;
 
 class Terms extends BaseModel
 {
@@ -135,5 +137,8 @@ class Terms extends BaseModel
     }
     public function flight(){
         return $this->belongsToMany(Flight::class,FlightTerm::getTableName(),'term_id','target_id');
+    }
+    public function train(){
+        return $this->belongsToMany(TrainModel::class,TrainTerm::getTableName(),'term_id','target_id');
     }
 }

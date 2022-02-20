@@ -12,7 +12,7 @@
                     <div class="panel-body">
                         <form action="{{route('train.admin.attribute.term.store')}}" method="post">
                             @csrf
-                            @include('Train::admin/terms/form')
+                            @include('Train::admin.terms.form')
                             <div class="">
                                 <button class="btn btn-primary" type="submit">{{__("Add new")}}</button>
                             </div>

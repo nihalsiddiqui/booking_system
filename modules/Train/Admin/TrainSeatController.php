@@ -9,6 +9,7 @@ use Illuminate\Validation\Rule;
 use Modules\AdminController;
 use Modules\Flight\Models\Flight;
 use Modules\Flight\Models\FlightSeat;
+use Modules\Train\Models\SeatType;
 use Modules\Train\Models\TrainModel;
 use Modules\Train\Models\TrainSeat;
 class TrainSeatController extends AdminController

@@ -1018,7 +1018,7 @@ class TrainModel extends BaseModel
                 "title"    => __("Attributes"),
                 "field"    => "terms",
                 "position" => "3",
-                "data"     => Attributes::getAllAttributesForApi("flight")
+                "data"     => Attributes::getAllAttributesForApi("train")
             ]
         ];
     }
@@ -1066,14 +1066,14 @@ class TrainModel extends BaseModel
 
     public function bookingPassengers()
     {
-        return $this->hasMany(BookingPassengers::class, 'flight_id')->whereHas('booking', function (Builder $query) {
+        return $this->hasMany(BookingPassengers::class, 'train_id')->whereHas('booking', function (Builder $query) {
             $query->whereNotIn('status', Booking::$notAcceptedStatus);
         });
     }
 
     public function booking()
     {
-        return $this->hasMany(Booking::class, 'flight_id');
+        return $this->hasMany(Booking::class, 'train_id');
     }
     public function getDurationAttribute(){
 
